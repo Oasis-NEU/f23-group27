@@ -24,6 +24,7 @@ chosen_track_id = tracks[song_index]
 track_info = sp.get_track_info(chosen_track_id)
 
 print(track_info)
+print("pkease worj")
 
 image_url = track_info['album_image']
 blurrer = ImageBlur(image_url)
