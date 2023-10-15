@@ -1,23 +1,25 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import pandas
-
+import os
 
 class Spotipy():
-    def __init__(self, CLIENT_ID, CLIENT_SECRET,SCOPE):
+    def __init__(self, CLIENT_ID, CLIENT_SECRET,SCOPE,cache_path):
         self.CLIENT_ID = CLIENT_ID
         self.CLIENT_SECRET = CLIENT_SECRET
         self.CLIENT_SCOPE = SCOPE
         self.sp = None
         self.USER_ID = None
+        self.cache_path = cache_path
 
 
     def authenticate_user(self):
         self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
             client_id= self.CLIENT_ID,
             client_secret= self.CLIENT_SECRET,
-            redirect_uri="http://localhost:5000/callback",
-            scope=  self.CLIENT_SCOPE
+            redirect_uri="http://localhost:3000/callback",
+            scope=  self.CLIENT_SCOPE,
+            cache_path= os.path.join(self.cache_path,".cache")
         ))
         self.USER_ID = self.sp.current_user()['id']
 

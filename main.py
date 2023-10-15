@@ -8,11 +8,14 @@ from ImageBlur import ImageBlur
 from Spotipy import Spotipy
 
 
+cache_path = os.path.expanduser("~/.cache/my_spotify_app/") #makes cache
+os.makedirs(cache_path, exist_ok=True)
+
 CLIENT_ID = os.environ.get("CLIENT_ID")
 CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
 SCOPE = "user-read-playback-state playlist-modify-public user-top-read user-read-recently-played"
 
-sp = Spotipy(CLIENT_ID,CLIENT_SECRET,SCOPE)
+sp = Spotipy(CLIENT_ID,CLIENT_SECRET,SCOPE,cache_path)
 sp.authenticate_user()
 
 
@@ -24,7 +27,7 @@ chosen_track_id = tracks[song_index]
 track_info = sp.get_track_info(chosen_track_id)
 
 print(track_info)
-print("pkease worj")
+
 
 image_url = track_info['album_image']
 blurrer = ImageBlur(image_url)
