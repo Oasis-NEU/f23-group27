@@ -10,7 +10,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
+  pointer-events: none;
+}
+
+.Magnifying-glass {
+  height: 45vmin;
   pointer-events: none;
 }
 
@@ -33,10 +38,11 @@
 
 
 button {
-  background-color: rgb(95, 213, 81); /* Green button background */
-  color: rgb(18, 18, 18); /* Black button text color */
+  background-color: rgb(45,189,88); /* Green button background */
+  color: rgb(255, 255, 255); /* Black button text color */
+  font-weight: 500;
   padding: 10px 20px;
-  border: rgb(62, 152, 52);
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
