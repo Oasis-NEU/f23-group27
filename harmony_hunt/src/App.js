@@ -8,7 +8,7 @@ function App() {
         <img src={logo} alt="Logo" className="App-logo" />
         
         <h1>Harmony Hunter</h1>
-        <button><img src={connect_with_spotify} className="Connect-with-spotify" /></button>
+        <button><img src={connect_with_spotify} className="Connect-with-spotify" width='250' height='50'/></button>
       </header>
     </div>
   );

@@ -38,10 +38,10 @@
 
 
 button {
-  background-color: rgba(45, 189, 88, 0); /* Green button background */
-  color: rgb(255, 255, 255); /* Black button text color */
+  background-color: rgba(45, 189, 88, 0);
+  color: rgb(255, 255, 255);
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
