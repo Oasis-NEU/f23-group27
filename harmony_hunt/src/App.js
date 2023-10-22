@@ -1,15 +1,14 @@
-import logo from './spotify-2.svg';
-import mg from './magnifying-glass.png';
+import logo from './harmony-hunt-logo_480.png';
+import connect_with_spotify from './connect-with-spotify.png';
 import './App.css';
-
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} alt="Logo" className="App-logo" />
-        <img src={mg} className="Magnifying-glass" />
+        
         <h1>Harmony Hunter</h1>
-        <button>Connect to Spotify</button>
+        <button><img src={connect_with_spotify} className="Connect-with-spotify" /></button>
       </header>
     </div>
   );

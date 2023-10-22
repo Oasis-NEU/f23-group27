@@ -10,14 +10,14 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 50vmin;
   pointer-events: none;
 }
 
-.Magnifying-glass {
+/* .Magnifying-glass {
   height: 45vmin;
   pointer-events: none;
-}
+} */
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -38,7 +38,7 @@
 
 
 button {
-  background-color: rgb(45,189,88); /* Green button background */
+  background-color: rgba(45, 189, 88, 0); /* Green button background */
   color: rgb(255, 255, 255); /* Black button text color */
   font-weight: 500;
   padding: 10px 20px;
