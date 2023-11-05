@@ -57,7 +57,7 @@ button {
     color: white; /* Initial and final color is white */
   }
   33%, 66% {
-    color: rgb(27,215,96); /* Color changes to blue at 10% and back to white at 90% */
+    color: rgb(27,215,96); /* Color changes to green at 33% and back to white at 66% */
   }
 }
 
