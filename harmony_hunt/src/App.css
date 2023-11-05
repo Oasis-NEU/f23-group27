@@ -22,15 +22,6 @@
   align-items: center; /* Align the headers to the left */
 }
 
-h1 {
-  font-size: 100px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-
 button {
   background-color: rgba(45, 189, 88, 0);
   color: rgb(255, 255, 255);
@@ -39,4 +30,39 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@keyframes textFlash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.flashing-text {
+  animation: textFlash 2s ease-in-out infinite; /* Adjust the duration as needed */
+}
+
+.increase-size {
+  font-size: 100px; /* Adjust the desired text size */
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    color: white; /* Initial and final color is white */
+  }
+  33%, 66% {
+    color: rgb(27,215,96); /* Color changes to blue at 10% and back to white at 90% */
+  }
+}
+
+/* Apply the animation to each span element */
+h1 span {
+  display: inline-block;
+  animation: colorChange 6s linear infinite; /* Adjust the duration as needed */
 }
