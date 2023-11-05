@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Game</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../src/style.css">
     </head>
 
     <body>
@@ -11,21 +11,22 @@
             <img src="../src/harmony-hunt-logo.png" id="logo">
         </div>
         <div id="all-boxes">
-            <div id="album-cover"></div>
+            <div id="guess-box"  class="hint">
+                <input type="text" id="guess-input" placeholder="Enter Guess...">
+                <button id="guess-button" action="checkGuess()"></button>
+            </div>
+            
             <div id="hint-and-guess-boxes">
-                <div id="guess-box"  class="hint">
-                    <input type="text" id="guess-input" placeholder="Enter Guess...">
-                    <button id="guess-button"></button>
-                </div>
+                <div id="album-cover"></div>
                 <div id="hint-boxes">
-                    <div id="genre" class="hint">
-                        <p class="hint-text">Genre:</p>
+                    <div class="hint">
+                        <p id="genre" class="hint-text">Genre:</p>
                     </div>
-                    <div id="artist" class="hint">
-                        <p class="hint-text">Artist:</p>
+                    <div class="hint">
+                        <p id="artist" class="hint-text">Artist:</p>
                     </div>
-                    <div id="year" class="hint">
-                        <p class="hint-text">Year Released:</p>
+                    <div class="hint">
+                        <p id="year" class="hint-text">Year Released:</p>
                     </div>
                     <div id="snippet" class="hint">
                         <button id="snippet-button">
