@@ -1,6 +1,8 @@
 import logo from './harmony-hunt-logo_480.png';
 import connect_with_spotify from './connect-with-spotify.png';
 import './App.css';
+import LoginButton from './Login/LoginButton'
+
 function App() {
   return (
     <div className="App">
@@ -10,9 +12,7 @@ function App() {
         <h1>
           <span>BE</span> <span>IN</span> <span>TUNE</span> <span>WITH</span> <span>YOUR</span> <span>TUNES</span>
         </h1>
-        <button>
-          <img src={connect_with_spotify} className="Connect-with-spotify" width="250" height="50" />
-        </button>
+        <LoginButton />
       </header>
     </div>
   );
