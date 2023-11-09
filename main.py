@@ -2,16 +2,18 @@ import os
 import random
 from Spotipy import Spotipy
 from flask import Flask, jsonify
+from flask_cors import CORS
+from flask_cors import cross_origin
+
 
 app = Flask(__name__)
-
-@app.route('/test')
-def test():
-    return "YOU STUPID ...."
+CORS(app, supports_credentials=True, origins=['http://localhost:3000']) #Update when we get an actual domain for the website
 
 
-@app.route('/get')
-def get_random_info():
+
+@app.route('/get-random-song-info') #Ask what a good naming principle is for
+@cross_origin()
+def get_random_song_info():
     cache_path = os.path.expanduser("~/.cache/my_spotify_app/")  # makes cache
     os.makedirs(cache_path, exist_ok=True)
 
