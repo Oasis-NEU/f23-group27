@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import connect_with_spotify from '../connect-with-spotify.png';
+import connect_with_spotify from './connect-with-spotify.png';
 
 const LoginButton = () => {
     
@@ -17,7 +17,7 @@ const LoginButton = () => {
     };
     
     return (<button onClick={handleLogin}>
-        <img src={connect_with_spotify} className="Connect-with-spotify" width="250" height="50" />
+        <img src={connect_with_spotify} className="Connect-with-spotify" width="250" height="50" alt="Connect with spotify" />
         </button>)
 };
 
