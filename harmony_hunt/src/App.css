@@ -1,38 +1,68 @@
 .App {
   text-align: center;
+  background-color: rgb(51, 51, 115); /* Navy blue background */
+  color: white; /* White text color */
+  height: 100vh; /* 100% viewport height */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50em;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 65vmin;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Align the headers to the left */
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: rgba(45, 189, 88, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes textFlash {
+  0% {
+    opacity: 0.25;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
   }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.flashing-text {
+  animation: textFlash 2s ease-in-out infinite; /* Adjust the duration as needed */
+}
+
+.increase-size {
+  font-size: 100px; /* Adjust the desired text size */
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    color: white; /* Initial and final color is white */
+  }
+  33%, 66% {
+    color: rgb(27,215,96); /* Color changes to green at 33% and back to white at 66% */
+  }
+}
+
+/* Apply the animation to each span element */
+h1 span {
+  display: inline-block;
+  animation: colorChange 6s linear infinite; /* Adjust the duration as needed */
 }

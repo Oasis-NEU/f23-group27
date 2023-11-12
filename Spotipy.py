@@ -1,7 +1,12 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+from ImageBlur import ImageBlur
+import requests
+from io import BytesIO
+from pydub import AudioSegment
 import pandas
 import os
+import base64
 
 class Spotipy():
     def __init__(self, CLIENT_ID, CLIENT_SECRET,SCOPE,cache_path):
@@ -111,11 +116,26 @@ class Spotipy():
 
         track_info['track_name'] = track["name"]
         track_info['release_date'] = track['album']['release_date']
-        track_info['album_name'] = track['album']['name']
-        track_info['album_image'] = track['album']['images'][0]['url']
         track_info['artist_name'] = track['artists'][0].get('name')
-        track_info['preview_url'] = track['preview_url']
+        track_info['album_name'] = track['album']['name']
+
+        image = track['album']['images'][0]['url']
+        track_info['album_image_url'] = image
+        track_info['album_image_blurred'] = ImageBlur(image).blur_image()
+
+
+        track_info['snippet'] = self.shorten_audio_url(track['preview_url'])
         return track_info
+
+    def shorten_audio_url(self,audio_url):
+        response = requests.get(audio_url)
+        audio_data = BytesIO(response.content)
+
+        shortened_audio = AudioSegment.from_mp3(audio_data)[:1500]
+        audio_data = shortened_audio.export(format='mp3')
+        base64_audio = base64.b64encode(audio_data.read()).decode("utf-8")
+
+        return base64_audio
 
 
 
