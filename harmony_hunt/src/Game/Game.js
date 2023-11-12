@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import './harmony-hunt-logo.png';
-import './App.css';
+import '../Login/harmony-hunt-logo.png';
+import '../App.css';
 import './style.css'
 import Header from './Header'
 import Hints from './Hints';

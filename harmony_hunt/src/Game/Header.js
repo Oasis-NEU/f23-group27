@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import './harmony-hunt-logo.png';
+import '../Login/harmony-hunt-logo.png';
 ​
 export default function Header({ gameMode }) {
     return (
