@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import connect_with_spotify from './connect-with-spotify.png';
+import {useNavigate} from 'react-router-dom'
 
 const LoginButton = () => {
     
@@ -14,6 +15,7 @@ const LoginButton = () => {
         } catch (error) {
             console.error("Failed to login:", error.message);
         }
+
     };
     
     return (<button onClick={handleLogin}>

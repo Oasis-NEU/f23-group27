@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
-import '../Login/harmony-hunt-logo.png';
+import '../Login/harmony-hunt-logo_480.png';
 import '../App.css';
 import './style.css'
 import Header from './Header'
-import Hints from './Hints';
-function App() { 
+import Hints from './Hint';
+function Game() { 
     
   const guessRef = useRef();
   const test_song = {
@@ -37,4 +37,4 @@ function App() {
     
   );
 }
-export default App;
+export default Game;

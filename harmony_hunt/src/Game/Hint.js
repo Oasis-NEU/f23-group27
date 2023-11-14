@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-​
+
 export default function Hints() {
     return(
         <div id="hint-and-guess-boxes">
